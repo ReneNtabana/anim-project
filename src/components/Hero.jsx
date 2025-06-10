@@ -12,7 +12,7 @@ const Hero = () => {
   const [isLoading, setISLoading] = useState(true);
   const [loadedVideos, setLoadedVideos] = useState(0);
 
-  const totalVideos = 3;
+  const totalVideos = 4;
   const nextVref = useRef(null);
   const upcomingVidIndex = (currentIndex % totalVideos) + 1;
   const handleMinivideoCLick = () => {
@@ -116,7 +116,7 @@ const Hero = () => {
         />
         <video
           src={getVSource(currentIndex === totalVideos - 1 ? 1 : currentIndex)}
-          autoPlay
+          // autoPlay
           muted
           loop
           className="absolute left-0 top-0 size-full object-cover object-center"
